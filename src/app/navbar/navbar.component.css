@@ -1,0 +1,19 @@
+.navbar {
+  --navbar_height: 8vh;
+  --navbar_width: 50vw;
+  width: var(--navbar_width);
+  height: var(--navbar_height);
+  border: 1px solid gray;
+  border-radius: calc(var(--navbar_height) / 2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  background-color: black;
+}
+
+.navbar-text {
+  color: #D2B48C;
+  font-size: 22px;
+  padding: 20px;
+}

@@ -1,0 +1,16 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+}
+
+.home {
+  color: white;
+  height: 100vh;
+  width: auto;
+  display: inline-block;
+  align-content: center;
+  margin-left: 20vw;
+  position:  fixed;
+}
