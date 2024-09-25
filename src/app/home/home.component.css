@@ -72,12 +72,29 @@
 }
 
 .circle {
+  margin-bottom: 50px;
   background-image: url('/assets/IMG_1899.jpg');
   background-size: cover;
-  border-radius: 25%;
+  border-radius: 50%;
   width: 20rem;
   height: 20rem;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 1400px) {
+  .self-portrait {
+    display: none;
+  }
+  .home {
+    --home-width: 100vw;
+  }
+}
+
+@media (max-height: 432px) {
+  .skill-outer-container {
+    padding-top: 30px;
+    padding-bottom: 80px;
+  }
 }

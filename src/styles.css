@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-.html {}
+html {
+  font-size: 16px;
+}
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -11,4 +13,10 @@
   width: 100vw;
   height: 100vh;
   background-color: rgb(0, 0, 0);
+}
+
+@media (max-width: 932px) {
+  html {
+    font-size: 12px;
+  }
 }

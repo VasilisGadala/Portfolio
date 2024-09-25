@@ -14,3 +14,10 @@
   margin-left: 10vw;
   position:  fixed;
 }
+
+@media (max-width: 1400px) {
+  .home {
+    margin-left: 0;
+    padding-top: 20px;
+  }
+}
