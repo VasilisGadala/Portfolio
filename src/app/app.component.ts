@@ -5,6 +5,7 @@ import { LoadingScreenComponent } from './loading-screen/loading-screen.componen
 import { TriangleGridComponent } from './triangle-grid/triangle-grid.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
+import { AboutComponent } from "./about/about.component";
 
 @Component({
   selector: 'app-root',
@@ -15,8 +16,9 @@ import { HomeComponent } from './home/home.component';
     LoadingScreenComponent,
     TriangleGridComponent,
     NavbarComponent,
-    HomeComponent
-  ],
+    HomeComponent,
+    AboutComponent
+],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

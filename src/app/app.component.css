@@ -9,10 +9,10 @@
   color: white;
   height: 100vh;
   width: auto;
-  display: inline-block;
+  display: flex;
   align-content: center;
   margin-left: 10vw;
-  position:  fixed;
+  position: relative;
 }
 
 @media (max-width: 1400px) {

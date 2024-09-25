@@ -1,9 +1,12 @@
 <app-loading-screen *ngIf="isLoading" (loadingComplete)="onLoadingComplete()"></app-loading-screen>
+<div class="app" style="z-index: 1; display: flex; width: 100%; height: 100%; justify-content: flex-start; align-content: center;">
+  <app-navbar style="position: fixed; z-index: 2"></app-navbar>
+</div>
 <div class="app">
-  <app-triangle-grid style="z-index: -1"></app-triangle-grid>
-  <app-navbar style="position: absolute"></app-navbar>
-</div>
-<div class="home">
-  <app-home></app-home>
-</div>
+    <app-triangle-grid style="z-index: -1"></app-triangle-grid>
+  </div>
+  <div class="home">
+    <app-home style="display: flex "></app-home>
+  </div>
+<app-about style="display: flex"></app-about>
 <router-outlet />

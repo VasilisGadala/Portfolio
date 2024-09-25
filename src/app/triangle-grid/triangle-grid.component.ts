@@ -70,7 +70,7 @@ export class TriangleGridComponent implements OnInit, AfterViewInit, OnDestroy {
     this.ctx.lineTo(0, -size / 2);
     this.ctx.lineTo(size / 2, size / 2);
     this.ctx.closePath();
-    this.ctx.fillStyle = '#3E2723';
+    this.ctx.fillStyle = '#241714';
     this.ctx.fill();
     this.ctx.restore();
   }
