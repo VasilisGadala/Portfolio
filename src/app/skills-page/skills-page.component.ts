@@ -27,10 +27,10 @@ interface Skill {
   `,
   styles: [`
     .skills-container {
-      min-height: 100vh;
       background-color: black;
       padding: 2rem;
       box-sizing: border-box;
+      padding-bottom: 100px;
     }
     .skills-title {
       font-size: 2.5rem;

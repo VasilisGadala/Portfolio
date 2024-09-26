@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from "./about/about.component";
 import { SkillsPageComponent } from './skills-page/skills-page.component';
+import { ResumeComponent } from './resume/resume.component';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,8 @@ import { SkillsPageComponent } from './skills-page/skills-page.component';
     NavbarComponent,
     HomeComponent,
     AboutComponent,
-    SkillsPageComponent
+    SkillsPageComponent,
+    ResumeComponent
 ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']

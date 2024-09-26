@@ -1,0 +1,105 @@
+.resume-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #000000;
+}
+
+h2 {
+    font-size: 3rem;
+    color: #ffffff; /* D2B48C */
+    padding: 10px;
+}
+  
+p {
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #999999;
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+h3 {
+    font-size: 2rem;
+    color: #D2B48C;
+    padding-bottom: 20px;
+}
+
+.resume-icon {
+    width: 5rem;
+    height: 5rem;
+}
+
+.resume-item-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: stretch;
+    width: 60%;
+    position: relative; /* Add this */
+    p {
+        padding-bottom: 50px;
+    }
+    h4 {
+        padding-bottom: 50px;
+    }
+}
+
+/* Add this new rule for the vertical line */
+.resume-item-container::before {
+    content: '';
+    position: absolute;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    left: 40%; /* Adjust this value to match your layout */
+    height: 100%;
+    width: 1px;
+    background-color: #999999;
+}
+
+.item-left {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-right: 40px;
+    /* Remove the border-right property from here */
+}
+
+.item-right {
+    width: 60%;
+    height: 100%;
+    padding-left: 40px;
+}
+
+@media (max-width: 768px) {
+    .resume-item-container {
+        padding-top: 50px;
+        flex-direction: column;
+        width: 90%;
+    }
+    .resume-item-container::before {
+        display: none; /* Hide the vertical line on mobile */
+    }
+    .item-left {
+        width: 100%;
+        padding-bottom: 0px;
+    }
+    .item-right {
+        width: 100%;
+    }
+}
+
