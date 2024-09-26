@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   background-color: #000000;
 }
 
@@ -16,8 +16,6 @@ p {
     font-size: 1.5rem;
     color: #ffffff;
     text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
 }
 
 h4 {
@@ -25,28 +23,34 @@ h4 {
     font-weight: normal;
     color: #999999;
     text-align: left;
-    padding-top: 10px;
-    padding-bottom: 10px;
-
 }
 
 h3 {
     font-size: 2rem;
     color: #D2B48C;
-    padding-bottom: 20px;
+    padding-bottom: 1rem;
 }
 
-.resume-icon {
+.resume-icon, .resume-item-logo {
     width: 5rem;
     height: 5rem;
+}
+
+.resume-item-logo-container {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .resume-item-container {
     display: flex;
     flex-direction: row;
-    align-items: stretch;
-    justify-content: stretch;
-    width: 60%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 70%;
     position: relative; /* Add this */
     p {
         padding-bottom: 50px;
@@ -62,14 +66,14 @@ h3 {
     position: absolute;
     padding-top: 50px;
     padding-bottom: 50px;
-    left: 40%; /* Adjust this value to match your layout */
+    left: 45%; /* Adjust this value to match your layout */
     height: 100%;
     width: 1px;
     background-color: #999999;
 }
 
 .item-left {
-    width: 40%;
+    width: 30%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -80,16 +84,30 @@ h3 {
 }
 
 .item-right {
-    width: 60%;
+    width: 55%;
     height: 100%;
     padding-left: 40px;
 }
 
+/* Add this new class */
+.desktop-padding {
+    padding-top: 50px;
+}
+
+.item-right.desktop-padding {
+    padding-top: 50px;
+}
+
 @media (max-width: 768px) {
     .resume-item-container {
-        padding-top: 50px;
         flex-direction: column;
         width: 90%;
+        p {
+            padding: 0;
+        }
+        h4 {
+            padding-bottom: 3rem;
+        }
     }
     .resume-item-container::before {
         display: none; /* Hide the vertical line on mobile */
@@ -100,6 +118,14 @@ h3 {
     }
     .item-right {
         width: 100%;
+        padding-left: 0px;
+    }
+    /* Remove desktop padding in mobile view */
+    .desktop-padding {
+        padding-top: 0;
+    }
+    .item-left, .item-right {
+        padding-top: 1rem; /* Add some consistent padding for mobile */
     }
 }
 
