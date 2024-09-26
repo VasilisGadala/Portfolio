@@ -6,6 +6,7 @@ import { TriangleGridComponent } from './triangle-grid/triangle-grid.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from "./about/about.component";
+import { SkillsPageComponent } from './skills-page/skills-page.component';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,8 @@ import { AboutComponent } from "./about/about.component";
     TriangleGridComponent,
     NavbarComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    SkillsPageComponent
 ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
