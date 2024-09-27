@@ -41,8 +41,21 @@ export class NavbarComponent {
     const element = document.getElementById(section);
     if (element) {
       const offset = 0; // Adjust this value to account for the navbar height
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      let elementPosition: number;
+      let offsetPosition: number;
+      if (element.tagName === "about") {
+        const childElement = element.querySelector('.about-content');
+        if (childElement) {
+          elementPosition = childElement.getBoundingClientRect().top;
+        } else {
+          elementPosition = 0
+        }
+
+      } else {
+        elementPosition = element.getBoundingClientRect().top;
+      }
+      offsetPosition = elementPosition + window.pageYOffset - offset;
+
 
       window.scrollTo({
         top: offsetPosition,
