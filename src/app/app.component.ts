@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from "./about/about.component";
 import { SkillsPageComponent } from './skills-page/skills-page.component';
 import { ResumeComponent } from './resume/resume.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +22,8 @@ import { ResumeComponent } from './resume/resume.component';
     HomeComponent,
     AboutComponent,
     SkillsPageComponent,
-    ResumeComponent
+    ResumeComponent,
+    ProjectsComponent
 ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']

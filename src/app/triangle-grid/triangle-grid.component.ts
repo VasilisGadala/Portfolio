@@ -23,7 +23,7 @@ export class TriangleGridComponent implements OnInit, AfterViewInit, OnDestroy {
   private ctx!: CanvasRenderingContext2D;
   private animationFrameId!: number;
   private triangles: { x: number; y: number; rotation: number; targetRotation: number }[] = [];
-  private triangleSize = 20;
+  private triangleSize = Math.max(window.innerWidth, window.innerHeight)/100;
 
   constructor(private renderer: Renderer2) {}
 

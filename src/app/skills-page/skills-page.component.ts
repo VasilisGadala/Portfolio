@@ -30,7 +30,6 @@ interface Skill {
       background-color: black;
       padding: 2rem;
       box-sizing: border-box;
-      padding-bottom: 100px;
     }
     .skills-title {
       font-size: 2.5rem;
@@ -43,7 +42,7 @@ interface Skill {
       display: flex;
       flex-direction: column;
       align-items: center;
-      max-width: 1200px;
+      max-width: 60%;
       margin: 0 auto;
     }
     .skill-row {
@@ -75,8 +74,8 @@ interface Skill {
       filter: brightness(1.2);
     }
     .skill-logo {
-      width: 50px;
-      height: 50px;
+      width: 3rem;
+      height: 3rem;
       margin-bottom: 0.5rem;
     }
     .skill-text {
@@ -96,6 +95,7 @@ interface Skill {
     @media (max-width: 768px) {
       .skills-wall {
         flex-direction: column;
+        max-width: 80%;
       }
       .skill-row {
         flex-direction: row;
@@ -145,14 +145,14 @@ export class SkillsPageComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     ScrollReveal().reveal('.skill-box:not(.spacer)', {
-      delay: 100,
+      delay: 0,
       distance: '50px',
       origin: 'left',
       interval: 100,
       duration: 2000, // Increased duration for slower animation
       easing: 'cubic-bezier(0.5, 0, 0, 1)',
       reset: true, // This makes the animation repeat every time the element enters the viewport
-      viewFactor: 0.2 // This triggers the animation when 20% of the element is in view
+      viewFactor: 0.1 // This triggers the animation when 20% of the element is in view
     });
   }
 

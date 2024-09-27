@@ -22,3 +22,10 @@
     overflow: hidden;
   }
 }
+
+.footer {
+  text-align: center;
+  color: #999999;
+  background-color: black;
+  padding-bottom: 1.5rem;
+}

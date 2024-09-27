@@ -1,0 +1,20 @@
+<div class="projects-container">
+    <div class="projects-content">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div 
+                #projectCard 
+                *ngFor="let project of projects; let i = index" 
+                class="project-card hidden" 
+                [ngClass]="getRowAnimationClass(i)">
+                <div class="project-content">
+                    <h3>{{ project.title }}</h3>
+                    <p [innerHTML]="project.description"></p>
+                    <div class="project-links">
+                        <a *ngIf="project.link" href="{{ project.link }}" target="_blank" style="color: black;">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

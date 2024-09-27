@@ -5,10 +5,20 @@
 <div class="app" style="z-index: -1">
     <app-triangle-grid style="z-index: -1"></app-triangle-grid>
 </div>
-<div class="home">
+<div id="home" class="home">
   <app-home style="display: flex "></app-home>
 </div>
-<app-about style="display: flex"></app-about>
-<app-skills-page><</app-skills-page>
-<app-resume></app-resume>
+<div id="about">
+  <app-about style="display: flex"></app-about>
+  <app-skills-page></app-skills-page>
+</div>
+<div id="experience">
+  <app-resume></app-resume>
+</div>
+<div id="projects">
+  <app-projects></app-projects>
+</div>
+<div class="footer">
+  <p>Last Updated: 9/27/2024</p>
+</div>
 <router-outlet />

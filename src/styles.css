@@ -22,3 +22,10 @@ body, html {
     font-size: 12px;
   }
 }
+
+@media (min-width: 2561px) {
+  body, html {
+    font-size: 1vw;
+  }
+}
+
