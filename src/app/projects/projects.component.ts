@@ -21,7 +21,7 @@ export class ProjectsComponent implements OnInit, AfterViewInit, OnDestroy {
     { 
       title: 'Personal Website',
       description: 'This website is written in Angular and hosted on GitHub Pages',
-      link: 'https://github.com/VasilisGadala/PersonalWebsite',
+      link: 'https://github.com/VasilisGadala/Portfolio',
       backgroundImage: '/assets/webpage.png'
     },
     { 
