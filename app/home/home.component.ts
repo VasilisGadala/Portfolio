@@ -21,7 +21,7 @@ import { trigger, style, animate, transition } from '@angular/animations';
   ]
 })
 export class HomeComponent implements OnInit {
-  skills: string[] = ['Fullstack Engineer'];
+  skills: string[] = ['Fullstack Engineer', 'Continuous Learner', 'Java Enthusiast'];
   currentSkill: string | null = null;
   currentIndex: number = 0;
 
