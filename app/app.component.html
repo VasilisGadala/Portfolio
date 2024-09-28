@@ -1,0 +1,24 @@
+<app-loading-screen *ngIf="isLoading" (loadingComplete)="onLoadingComplete()"></app-loading-screen>
+<div class="app" style="z-index: 1; display: flex; width: 100%; justify-content: flex-start; align-content: center;">
+  <app-navbar style="position: fixed; z-index: 1"></app-navbar>
+</div>
+<div class="app" style="z-index: -1">
+    <app-triangle-grid style="z-index: -1"></app-triangle-grid>
+</div>
+<div id="home" class="home">
+  <app-home style="display: flex "></app-home>
+</div>
+<div id="about">
+  <app-about style="display: flex"></app-about>
+  <app-skills-page></app-skills-page>
+</div>
+<div id="experience">
+  <app-resume></app-resume>
+</div>
+<div id="projects">
+  <app-projects></app-projects>
+</div>
+<div class="footer">
+  <p>Last Updated: 9/27/2024</p>
+</div>
+<router-outlet />

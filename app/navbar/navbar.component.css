@@ -1,0 +1,39 @@
+.navbar {
+  --navbar_height: 8vh;
+  --navbar_width: 50vw;
+  width: var(--navbar_width);
+  height: var(--navbar_height);
+  border: 1px solid gray;
+  border-radius: calc(var(--navbar_height) / 2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  background-color: black;
+}
+
+.navbar-text {
+  color: #ffffff;
+  font-size: 1.375rem;
+  padding: 1.25rem;
+  transform-origin: center;
+  transition: transform 0.2s, color 0.3s;
+  cursor: pointer;
+}
+
+.navbar-text.active {
+  color: #D2B48C;
+}
+
+@media (max-width: 932px) {
+  .navbar {
+    --navbar_width: 100vw;
+    --navbar_height: max(8vh, 70px);
+  }
+}
+
+.navbar-text:hover {
+  transform: scale(1.1);
+  cursor: default;
+}
+
