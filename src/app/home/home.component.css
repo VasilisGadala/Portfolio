@@ -7,7 +7,6 @@
   display: flex;
   flex-direction: column;
   font-size: 3rem;
-  font-family: "Courier New", Courier, monospace;
   justify-content: center;
 }
 
@@ -28,7 +27,7 @@
 .skill-container {
   position: relative;
   width: 100%;
-  height: 1.2em; 
+  height: 1.2em;
   overflow: hidden;
 }
 
@@ -54,7 +53,7 @@
 
 .social-icon {
   width: 5rem;
-  height: auto; 
+  height: auto;
   margin: 0;
 }
 
