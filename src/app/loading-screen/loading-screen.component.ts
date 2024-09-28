@@ -8,7 +8,7 @@ import { trigger, state, style, animate, transition, keyframes } from '@angular/
   imports: [CommonModule],
   template: `
     <div [@loadingAnimation]="animationState" class="loading-screen">
-      <svg width="200" height="200" viewBox="0 0 200 200">
+      <svg width=20rem height=20rem viewBox="0 0 200 200">
         <g *ngFor="let index of [0, 1, 2]">
           <path
             [attr.d]="'M 100 100 m 0 -' + (70 - index * 20) + ' a ' + (70 - index * 20) + ' ' + (70 - index * 20) + ' 0 1 0 0 ' + (2 * (70 - index * 20)) + ' a ' + (70 - index * 20) + ' ' + (70 - index * 20) + ' 0 1 0 0 -' + (2 * (70 - index * 20))"
@@ -41,6 +41,10 @@ import { trigger, state, style, animate, transition, keyframes } from '@angular/
       align-items: center;
       background-color: black;
       z-index: 9999;
+      overflow: hidden;
+    }
+    body {
+      overflow: hidden;
     }
   `],
   animations: [
@@ -68,6 +72,7 @@ export class LoadingScreenComponent implements OnInit, OnDestroy {
   Math = Math;
 
   ngOnInit() {
+    document.body.style.overflow = 'hidden'; // Hide scroll bar
     this.zoomTimer = setTimeout(() => {
       this.animationState = 'zoomed';
       this.hideTimer = setTimeout(() => {
@@ -86,5 +91,6 @@ export class LoadingScreenComponent implements OnInit, OnDestroy {
     if (this.hideTimer) {
       clearTimeout(this.hideTimer);
     }
+    document.body.style.overflow = ''; // Restore scroll bar
   }
 }

@@ -40,17 +40,16 @@ export class NavbarComponent {
   scrollTo(section: string) {
     const element = document.getElementById(section);
     if (element) {
-      const offset = 0; // Adjust this value to account for the navbar height
+      let offset = 20; // Adjust this value to account for the navbar height
       let elementPosition: number;
       let offsetPosition: number;
-      if (element.tagName === "about") {
+      if (section == "about") {
         const childElement = element.querySelector('.about-content');
         if (childElement) {
           elementPosition = childElement.getBoundingClientRect().top;
         } else {
           elementPosition = 0
         }
-
       } else {
         elementPosition = element.getBoundingClientRect().top;
       }

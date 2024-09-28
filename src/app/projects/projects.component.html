@@ -6,7 +6,9 @@
                 #projectCard 
                 *ngFor="let project of projects; let i = index" 
                 class="project-card hidden" 
-                [ngClass]="getRowAnimationClass(i)">
+                [ngClass]="getRowAnimationClass(i)"
+                [style.background-image]="project.backgroundImage ? 'url(' + project.backgroundImage + ')' : 'none'"
+                [style.background-color]="project.backgroundImage ? 'transparent' : '#f0f0f0'">
                 <div class="project-content">
                     <h3>{{ project.title }}</h3>
                     <p [innerHTML]="project.description"></p>
